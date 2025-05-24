@@ -13,6 +13,7 @@ public class UserCtrl {
     @Autowired
     private UserService userService;
 
+    /* 删除 */
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     public Integer delete(Integer userId) {
         System.out.println(userId);
@@ -20,6 +21,7 @@ public class UserCtrl {
         return result;
     }
 
+    /* 修改 */
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     @ResponseBody
     public String update(User user) {
